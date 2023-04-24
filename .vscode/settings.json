@@ -3,6 +3,7 @@
     "stack": "cpp",
     "iostream": "cpp",
     "__config": "cpp",
-    "__nullptr": "cpp"
+    "__nullptr": "cpp",
+    "optional": "cpp"
   }
 }
