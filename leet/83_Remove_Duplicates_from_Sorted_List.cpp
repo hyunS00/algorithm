@@ -9,7 +9,7 @@ struct ListNode {
 class Solution {
 public:
     ListNode* deleteDuplicates(ListNode* head) {
-        ListNode *dummy = new ListNode(0);
+        ListNode *dummy = new ListNode(101);
         dummy->next=head;
         ListNode *curr;
         curr=dummy;
@@ -19,6 +19,8 @@ public:
                 deleteNode=curr->next;
                 curr->next=deleteNode->next;
                 delete(deleteNode);
+            }else{
+                curr=curr->next;
             }
         }
         return dummy->next;
