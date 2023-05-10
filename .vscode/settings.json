@@ -1,9 +1,11 @@
 {
-  "files.associations": {
-    "stack": "cpp",
-    "iostream": "cpp",
-    "__config": "cpp",
-    "__nullptr": "cpp",
-    "optional": "cpp"
-  }
+    "files.associations": {
+        "stack": "cpp",
+        "iostream": "cpp",
+        "__config": "cpp",
+        "__nullptr": "cpp",
+        "optional": "cpp",
+        "vector": "cpp",
+        "__node_handle": "cpp"
+    }
 }

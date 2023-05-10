@@ -12,28 +12,44 @@ struct ListNode {
 class Solution {
 public:
     ListNode* mergeTwoLists(ListNode* list1, ListNode* list2) {
-        ListNode* list1Node;
-        ListNode* list2Node;
-        ListNode* bigNode;
-        ListNode* smallNode;
-        list1Node = list1;
-        list2Node = list2;
-        if(list1Node->val>list2Node->val){
-            bigNode = list1Node;
-            smallNode=list2Node;
+        ListNode *curr1;
+        ListNode *curr2;
+        ListNode *nextNode;
+        curr1=list1;
+        curr2=list2;
+        if (curr1 == nullptr) {
+            return curr2;
+        }
+        if (curr2 == nullptr) {
+            return curr1;
+        }
+        ListNode *dummy = new ListNode();
+        if(curr1->val>=curr2->val){        
+            dummy->next=curr2;
         }else{
-            bigNode = list2Node;
-            smallNode=list1Node;
+            dummy->next=curr1;
         }
-        while (list1Node->next!=nullptr&&list2Node->next!=nullptr){
-            while (smallNode->next!=nullptr||smallNode->val<bigNode->val){
-                smallNode->next=smallNode;
-            }
-            if(smallNode->next!=nullptr){
+        while(curr1->next!=nullptr&&curr2->next!=nullptr){
+            if(curr1->val>=curr2->val){
+                nextNode = curr2->next;
+                if(nextNode==nullptr){
+                    curr2->next=curr1;
+                    break;
+                }
+                curr2->next=curr1;
+                curr2=nextNode;
                 
+            }else{
+                nextNode = curr1->next;
+                if(nextNode==nullptr){
+                    curr1->next=curr2;
+                    break;
+                }
+                curr1->next=curr2;
+                curr1=nextNode;
             }
         }
-        
+        return dummy->next;
     }
 };
 
