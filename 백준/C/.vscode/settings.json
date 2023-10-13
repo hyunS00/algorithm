@@ -6,6 +6,11 @@
         "istream": "cpp",
         "complex": "cpp",
         "valarray": "cpp",
-        "string": "cpp"
+        "string": "cpp",
+        "iosfwd": "cpp",
+        "ios": "cpp",
+        "__config": "cpp",
+        "queue": "cpp",
+        "stack": "cpp"
     }
 }
