@@ -11,6 +11,10 @@
         "ios": "cpp",
         "__config": "cpp",
         "queue": "cpp",
-        "stack": "cpp"
+        "stack": "cpp",
+        "compare": "cpp",
+        "functional": "cpp",
+        "variant": "cpp",
+        "__bit_reference": "cpp"
     }
 }

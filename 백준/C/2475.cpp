@@ -24,7 +24,6 @@ int main(){
     splitStr = split(S," ");
     long long checkNum = 0;
 
-    cout << endl;
     for(string str : splitStr){
         checkNum += pow((int)str[0]-48,2);
     }
