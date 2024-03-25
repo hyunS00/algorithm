@@ -14,6 +14,7 @@ def binary_search(list,target,start,end):
         return binary_search(list,target,mid+1,end)
         
 
+
 N = int(input())
 
 A = list(map(int,sys.stdin.readline().split()))
