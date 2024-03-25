@@ -14,8 +14,6 @@ def binary_search(tree,start,end):
     global M,heigt
     mid = int((start + end) / 2)
     if mid < start or mid > end:
-        print('s: ',start,'m: ',mid,'e: ',end)
-        print(cut_tree(tree,mid))
         print(mid)
         return
     
