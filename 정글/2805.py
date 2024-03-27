@@ -14,19 +14,15 @@ def binary_search(tree,start,end):
     global M,heigt
     mid = int((start + end) / 2)
     if mid < start or mid > end:
-        print(mid)
-        return
+        return mid
     
     tree_cnt = cut_tree(tree,mid)
     if tree_cnt == M:
-        print(mid)
-        return
+        return mid
     elif tree_cnt < M:
-        binary_search(tree, start,mid-1)
+        return binary_search(tree, start,mid-1)
     else:
-        binary_search(tree,mid+1, end)
-
-    return
+        return binary_search(tree,mid+1, end)
 
 N, M = list(map(int,sys.stdin.readline().split()))
 tree = list(map(int,sys.stdin.readline().split()))
@@ -34,4 +30,4 @@ tree = list(map(int,sys.stdin.readline().split()))
 tree.sort()
 print(tree)
 
-binary_search(tree,0,tree[len(tree)-1])
+print(binary_search(tree,0,tree[len(tree)-1]))
