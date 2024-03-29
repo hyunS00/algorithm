@@ -8,18 +8,18 @@ def ascii_code(x):
         code = 0
     return code
 
-def preorder(index,pre,mid,end):
+def order(index,pre,mid,end):
     
     pre.append(chr(index+64))
 
     if node[index][0] != 0:
-        preorder(node[index][0],pre,mid,end)
+        order(node[index][0],pre,mid,end)
         node[index][0] = 0
 
     mid.append(chr(index+64))
 
     if node[index][1] != 0 :
-        preorder(node[index][1],pre,mid,end)
+        order(node[index][1],pre,mid,end)
         node[index][1] = 0
 
     end.append(chr(index+64))
@@ -36,7 +36,7 @@ pre = []
 mid = []
 end = []
 
-preorder(1,pre,mid,end)
+order(1,pre,mid,end)
 
 print(''.join(pre))
 print(''.join(mid))
