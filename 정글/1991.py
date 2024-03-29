@@ -35,7 +35,9 @@ for i in range(0,N):
 pre = []
 mid = []
 end = []
+
 preorder(1,pre,mid,end)
+
 print(''.join(pre))
 print(''.join(mid))
 print(''.join(end))
