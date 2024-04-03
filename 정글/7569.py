@@ -38,8 +38,6 @@ def bfs(box):
                     return -1
     return day
 
-
-    return
 # 가로:M 세로:N 높이:H
 M, N, H = map(int, sys.stdin.readline().split())
 
