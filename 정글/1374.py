@@ -8,14 +8,14 @@ def greedy(lecture, hq):
     heapq.heappush(hq,end)
     for i in range(1, N):
         start, end, number = lecture[i]
-        end_point = heapq.heappop(hq)
+        end_min = heapq.heappop(hq)
 
-        if end_point <= start:
+        if end_min <= start:
             heapq.heappush(hq,end)
         else:
             cnt += 1
             heapq.heappush(hq,end)
-            heapq.heappush(hq,end_point)
+            heapq.heappush(hq,end_min)
     
     return cnt
 
