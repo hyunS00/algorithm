@@ -13,7 +13,6 @@ int main(){
     cin >> N >> M;
     vector<int> visit(N+1);
     vector<int> number(M);
-    vector<int> ans;
     fill(visit.begin(),visit.end(),0);
 
     dfs(number,visit, N, M, 0);
