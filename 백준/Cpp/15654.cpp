@@ -37,6 +37,7 @@ void dfs(vector<int> number, vector<int> visit, vector<int> ans, int N, int M, i
     for (int i = 0; i < N; i++){
         if (visit[i])
             continue;
+            
         visit[i] = 1;
         ans[k] = number[i];
         dfs(number, visit, ans, N, M, k+1);
