@@ -20,6 +20,7 @@ vector<string> split(string str, string delimeter){
     ret.push_back(str);
     return ret;
 }
+
 int main(){
     getline(cin, S);
     vector<string> splitStr = split(S," ");
