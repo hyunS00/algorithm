@@ -13,7 +13,7 @@ int main(){
     {
         binary = '0' + binary;
     }
-    cout << binary << "\n";
+
     for(int i = 0; i < binary.length(); i += 3){
         int num = (binary[i]-'0') * 4 + (binary[i+1] - '0') * 2 + (binary[i+2] - '0');
         cout << num;
