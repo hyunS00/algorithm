@@ -1,0 +1,92 @@
+# OS generated files
+.DS_Store
+Thumbs.db
+.Spotlight-V100
+.Trashes
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*~
+
+# C++ ignores
+*.exe
+*.out
+*.app
+*.o
+*.obj
+*.dll
+*.so
+*.dylib
+
+# C++ Debug files
+Debug/
+Release/
+*.ilk
+*.pdb
+*.idb
+*.ipch
+
+# Visual Studio files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.vcxproj.filters
+
+# Keep C++ project files
+!*.sln
+!*.vcxproj
+
+# Python ignores
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# JavaScript / Node.js ignores
+node_modules/
+npm-debug.log
+yarn-error.log
+.env
+.next
+
+# Logs and databases
+*.log
+*.sql
+*.sqlite
+
+# Project specific ignores
+/백준/Cpp/*
+!/백준/Cpp/*.*
+line
+num
+command.txt
+
+# Temporary files
+*.tmp
+*.bak
+*.swp
+
+# Keep these files
+!makefile
+
+# Git related (if you want to ignore .git in subdirectories)
+.git/
