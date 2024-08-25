@@ -20,7 +20,7 @@ int func(int n, int r, int c){
 
     int half = 1 << (n-1);
     if(r < half && c < half) return func(n-1, r ,c);
-    if(r < half && c >= half) return half + func(n-1, r, c - half);
+    if(r < half && c >= half) return half*half + func(n-1, r, c - half);
     if(r >= half && c < half) return 2*half*half + func(n-1, r- half, c);
     return 3*half*half + func(n-1, r - half, c - half);
 }
