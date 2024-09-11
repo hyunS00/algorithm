@@ -21,7 +21,7 @@ int main(){
         }
     }
 
-    func(0, 0, 0, 0);
+    func(-1, 0, 0, 0);
     cout << ans << endl;
 }
 
@@ -55,7 +55,7 @@ void func(int idx, int som, int yeon, int cnt){
         return;
     }
 
-    for(int i = idx ; i < 25; i++){
+    for(int i = idx + 1; i < 25; i++){
         int x = i / 5;
         int y = i % 5;
 
