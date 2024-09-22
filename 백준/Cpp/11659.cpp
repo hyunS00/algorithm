@@ -19,6 +19,5 @@ int main(){
         cin >> i >> j;
 
         cout << dp[j] - dp[i-1] << endl;
-    }
-    
+    }   
 }
