@@ -21,7 +21,6 @@ int main(){
     for(int i = 0; i < n; i++)
         for(int j = 0; j < n; j++)
             two2.push_back(c[i] + d[j]);
-
     
     sort(two2.begin(), two2.end());
 
