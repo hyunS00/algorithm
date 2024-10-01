@@ -7,7 +7,6 @@ using namespace std;
 
 int k, l;
 unordered_map<string, int> s2i;
-
 bool cmp(pair<string, int> &a, pair<string, int> &b){
     return a.second < b.second;
 }
