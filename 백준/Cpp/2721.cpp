@@ -26,6 +26,4 @@ int main() {
     
     for (int i = 0; i < T; ++i)
         cout << weighted_sum(test_cases[i]) << endl;
-    
-    return 0;
 }
