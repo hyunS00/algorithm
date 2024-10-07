@@ -36,7 +36,6 @@ int pop(){
             swap(heap[parent],heap[child]);
         parent = child;
     }
-    
     return tmp;
 }
 
@@ -49,5 +48,4 @@ int main(){
         if(x == 0) cout << pop() << endl;
         else push(x);
     }
-    
 }
