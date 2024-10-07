@@ -17,6 +17,5 @@ int main(){
             if(PQ.size() > n) PQ.pop();
         }
     }
-
     cout << -PQ.top();
 }
