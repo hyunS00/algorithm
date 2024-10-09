@@ -3,13 +3,14 @@
 #define endl "\n"
 using namespace std;
 
-void dfs(int cur, int prev, bool &isTree,  vector<vector<int>> adj, vector<bool> visited){
+void dfs(int cur, int prev, bool &isTree,  vector<vector<int>> &adj, vector<bool> &visited){
     for(int nxt : adj[cur]){
         if(nxt == prev) continue;
         if(visited[nxt]){
             isTree = false;
             continue;
         }
+        visited[nxt] = true;
         dfs(nxt, cur, isTree, adj, visited);
     }
 }
@@ -21,8 +22,6 @@ int main(){
         int n, m;
         cin >> n >> m;
         if(n == 0 && m == 0) break;
-        idx++;
-
         vector<vector<int>> adj(n+1, vector<int>());
         vector<bool> visited(n+1, false);
 
@@ -42,10 +41,9 @@ int main(){
             cnt += isTree;
         }
 
-        cout << "Case " << idx << ": ";
-        
-        if(cnt == 0) cout << "No trees.";
-        else if(cnt == 1) cout << "There is one tree.";
-        else cout << "A forest of " << cnt << " trees.";
+        cout << "Case " << ++idx << ": ";
+        if(cnt == 0) cout << "No trees." << endl;
+        else if(cnt == 1) cout << "There is one tree." << endl;
+        else cout << "A forest of " << cnt << " trees." << endl;
     }
 }
