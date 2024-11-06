@@ -22,18 +22,15 @@ int main(){
             um[S.top()] = 0;
             S.pop();
         }
+        
         if(S.empty()){
             S.push(a[i]);
             continue;
         }
 
         um[a[i]]++;
-        if(S.top() == a[i]){
-            ans += um[a[i]];
-        }
-        else{
-            ans++;
-        }
+        if(S.top() == a[i]) ans += um[a[i]];
+        else ans++;
         S.push(a[i]);
     }
     cout << ans;
